@@ -8,3 +8,24 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
+#carousel{
+    height: 400px;
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.gallery{
+    height: 100%;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+img.active{
+    display: block;
+}
