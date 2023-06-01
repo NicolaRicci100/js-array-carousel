@@ -2,6 +2,7 @@ console.log('JS OK');
 
 // prendo tutte le immagini in un array
 const posters = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
+console.log(posters.length);
 
 //creo una variabile per la gallery
 const gallery = document.querySelector('.gallery');
@@ -16,7 +17,6 @@ let onePoster = '';
 //creo un ciclo per mettere tutte le immagini
 for(let i = 0; i < posters.length; i++){
     onePoster += `<img src="${posters[i]}">`;
-    console.log(onePoster);
 }
 //restituisco le immagini alla pagina
 gallery.innerHTML = onePoster;
@@ -31,7 +31,9 @@ galleryImages[dispalyImage].classList.add('active');
 //funzione bottone superiore
 topButton.addEventListener('click', function(){
     if(!dispalyImage){
-        return;
+        galleryImages[dispalyImage].classList.remove('active');
+        dispalyImage = posters.length - 1; // ! SALTA UN'IMMAGINE
+        galleryImages[dispalyImage].classList.add('active');
     }
     galleryImages[dispalyImage].classList.remove('active');
     dispalyImage--;
@@ -40,7 +42,9 @@ topButton.addEventListener('click', function(){
 //funzione bottone inferiore
 downButton.addEventListener('click', function(){
     if(dispalyImage === posters.length - 1){
-        return;
+        galleryImages[dispalyImage].classList.remove('active');
+        dispalyImage = 0; // ! SALTA UN'IMMAGINE
+        galleryImages[dispalyImage].classList.add('active');;
     }
     galleryImages[dispalyImage].classList.remove('active');
     dispalyImage++;
