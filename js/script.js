@@ -15,7 +15,7 @@ const downButton = document.getElementById('down');
 let onePoster = '';
 
 //creo un ciclo per mettere tutte le immagini
-for(let i = 0; i < posters.length; i++){
+for(let i = 0; i < posters.length; i++){ // ! PROBABILE CAUSA DEI PROBLEMI SOTTO
     onePoster += `<img src="${posters[i]}">`;
 }
 //restituisco le immagini alla pagina
@@ -44,7 +44,7 @@ downButton.addEventListener('click', function(){
     if(dispalyImage === posters.length - 1){
         galleryImages[dispalyImage].classList.remove('active');
         dispalyImage = 0; // ! SALTA UN'IMMAGINE
-        galleryImages[dispalyImage].classList.add('active');;
+        galleryImages[dispalyImage].classList.add('active');
     }
     galleryImages[dispalyImage].classList.remove('active');
     dispalyImage++;
