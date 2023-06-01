@@ -1,3 +1,14 @@
 ## STEPS
-- Creo un layout temporaneo per il carosello *(nel file index.html)*
-- 
+- Creo un layout temporaneo per il carosello e importo le immagini *(nel file index.html)*
+- Creo un array con tutte le immagini
+- Creo delle variabili per i miei bottoni e una per la *gallery*
+- Creo un ciclo per inserire le immagini in pagina prendendole dall'array
+- Stabilisco un'immagine di partenza tramite una variabile
+- Premo il bottone superiore
+    - **SE** sono alla prima immagine
+        - non accade nulla
+    - **ALRIMENTI** passo ad un'altra immagine
+- Premo il bottone inferiore
+    - **SE** sono all'utlima immagine
+        - non accade nulla
+    - **ALTRIMENTI** passo ad un'altra immagine
