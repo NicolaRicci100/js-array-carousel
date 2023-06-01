@@ -6,9 +6,9 @@
 - Stabilisco un'immagine di partenza tramite una variabile
 - Premo il bottone superiore
     - **SE** sono alla prima immagine
-        - non accade nulla
-    - **ALRIMENTI** passo ad un'altra immagine
+        - passa all'ultima
+    - **ALRIMENTI** passa alla precedente immagine
 - Premo il bottone inferiore
     - **SE** sono all'utlima immagine
-        - non accade nulla
-    - **ALTRIMENTI** passo ad un'altra immagine
+        - passa alla prima
+    - **ALTRIMENTI** passa alla prossima immagine
