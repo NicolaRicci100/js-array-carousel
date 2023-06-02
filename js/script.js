@@ -15,7 +15,7 @@ const downButton = document.getElementById('down');
 let onePoster = '';
 
 //creo un ciclo per mettere tutte le immagini
-for(let i = 0; i < posters.length; i++){ // ! PROBABILE CAUSA DEI PROBLEMI SOTTO
+for(let i = 0; i < posters.length; i++){
     onePoster += `<img src="${posters[i]}">`;
 }
 //restituisco le immagini alla pagina
@@ -31,9 +31,7 @@ galleryImages[dispalyImage].classList.add('active');
 //funzione bottone superiore
 topButton.addEventListener('click', function(){
     if(!dispalyImage){
-        galleryImages[dispalyImage].classList.remove('active');
-        dispalyImage = posters.length - 1; // ! SALTA UN'IMMAGINE
-        galleryImages[dispalyImage].classList.add('active');
+        return;
     }
     galleryImages[dispalyImage].classList.remove('active');
     dispalyImage--;
@@ -42,9 +40,7 @@ topButton.addEventListener('click', function(){
 //funzione bottone inferiore
 downButton.addEventListener('click', function(){
     if(dispalyImage === posters.length - 1){
-        galleryImages[dispalyImage].classList.remove('active');
-        dispalyImage = 0; // ! SALTA UN'IMMAGINE
-        galleryImages[dispalyImage].classList.add('active');
+        return;
     }
     galleryImages[dispalyImage].classList.remove('active');
     dispalyImage++;
